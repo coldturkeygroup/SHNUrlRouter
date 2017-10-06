@@ -116,7 +116,7 @@ open class UrlRouter {
 	}
 
 	fileprivate func normalizePath(_ path: String?) -> String {
-		if let path = path?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) , path.characters.count > 0 {
+		if let path = path?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) , path.count > 0 {
 			return "/" + path.trimmingCharacters(in: self.slashCharacterSet)
 		} else {
 			return "/"
@@ -186,7 +186,7 @@ open class UrlRouter {
 	*/
 	open func route(for url: URL) -> UrlRouted? {
 		let path = self.normalizePath(url.path)
-		let range = NSMakeRange(0, path.characters.count)
+		let range = NSMakeRange(0, path.count)
 
 		for pattern in patterns {
 			if let match = pattern.0.0.firstMatch(in: path, options: [], range: range) {

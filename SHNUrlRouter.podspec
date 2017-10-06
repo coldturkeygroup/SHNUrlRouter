@@ -1,9 +1,11 @@
 Pod::Spec.new do |s|
 	s.name         = "SHNUrlRouter"
-	s.version      = "1.3.0"
+	s.version      = "1.3.1"
 	s.summary      = "Simple Router for Swift"
 	s.homepage     = "https://github.com/coldturkeygroup/SHNUrlRouter"
 	s.license      = "MIT"
+
+	s.author       = "Shaun Harrison & CTG"
 
 	s.platform     = :ios, "8.0"
 
