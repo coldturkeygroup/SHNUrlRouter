@@ -29,8 +29,8 @@ import Foundation
 public typealias SHNUrlRouted = UrlRouted
 
 open class UrlRouted: CustomDebugStringConvertible {
-	open let route: UrlRoute
-	open let parameters: [String: String]
+	public let route: UrlRoute
+	public let parameters: [String: String]
 
 	public init(route: UrlRoute, parameters: [String: String]) {
 		self.route = route

@@ -42,10 +42,10 @@ open class UrlRoute: CustomDebugStringConvertible {
 	fileprivate weak var router: UrlRouter?
 
 	/** Original route pattern this route was created with */
-	open let pattern: String
+	public let pattern: String
 
 	/** Route handler to use during dispatching */
-	open let handler: UrlRouteHandler
+	public let handler: UrlRouteHandler
 
 	open var debugDescription: String {
 		return self.pattern
